@@ -2,3 +2,6 @@
 .transitions {
   @apply transition-all duration-150;
 }
+.border {
+  border-color: rgb(206, 206, 206);
+}
