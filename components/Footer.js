@@ -4,7 +4,7 @@ import React from 'react'
 
 export default function page() {
   return (
-    <footer className="w-full py-2 bg-gray-200 text-gray-600">
+    <footer className="w-full py-2 bg-gray-200 text-gray-600 mt-20">
           <div className="w-11/12 md:w-8/12 mx-auto grid grid-cols-2 md:grid-cols-4 gap-y-5 pt-5">
             <div className="col-span-1 flex flex-col gap-y-1">
               <h2 className="text-lg font-semibold">About Us</h2>

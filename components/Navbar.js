@@ -87,7 +87,7 @@ export default function page() {
                 </button>
               </Link>  
               <div className={`${navStatus ? "w-[108.5%] flex md:static absolute -left-[4%] flex-col -bottom-[162px] gap-y-3 py-3" : "hidden md:flex"} bg-white py-[22px] items-center justify-center gap-x-7`}>
-                <Link href="/" className={`${pathName === '/' ? 'font-semibold text-red-400' : ''}`}>Popular</Link>
+                <Link href="/explore" className={`${pathName === '/explore' && pathName !== '/' ? 'font-semibold text-red-400' : ''}`}>Explore</Link>
                 <Link href="/treditional" className={`${pathName === '/treditional' ? 'font-semibold text-red-400' : ''}`}>Treditional</Link>
                 <div onClick={()=> setLocalStatus(!localStatus)} className="relative flex items-center gap-x-1 cursor-pointer">
                   <span>Famous</span>
