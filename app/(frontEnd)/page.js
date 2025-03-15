@@ -41,8 +41,8 @@ export default function Home() {
 
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 px-2">
         {regions.map((region) => (
-          <Link key={region.slug} href={`/foods/${region.slug}`} className="block bg-white shadow-lg rounded-lg hover:scale-105 transition">
-            <Image src={region.image} width={200} height={150} alt={region.name} className="w-full h-40 object-cover rounded-t-md" />
+          <Link key={region.id} href={`/explore/${region.slug}`} className="block bg-white shadow-lg rounded-lg hover:scale-105 transition">
+            <Image src={region.image} width={500} height={500} alt={region.name} className="w-full h-40 object-cover rounded-t-md" />
             <h3 className="text-xl font-semibold my-3 text-center">{region.name}</h3>
           </Link>
         ))}
