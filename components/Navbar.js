@@ -87,10 +87,10 @@ export default function page() {
                 </button>
               </Link>  
               <div className={`${navStatus ? "w-[108.5%] flex md:static absolute -left-[4%] flex-col -bottom-[162px] gap-y-3 py-3" : "hidden md:flex"} bg-white py-[22px] items-center justify-center gap-x-7`}>
-                <Link href="/explore" className={`${pathName === '/explore' && pathName !== '/' ? 'font-semibold text-red-400' : ''}`}>Explore</Link>
-                <Link href="/treditional" className={`${pathName === '/treditional' ? 'font-semibold text-red-400' : ''}`}>Treditional</Link>
+                <Link href="/explore" className={`${pathName === '/explore' && pathName !== '/' ? 'font-semibold text-red-400' : ''} font-bold`}>Explore</Link>
+                <Link href="/treditional" className={`${pathName === '/treditional' ? 'font-semibold text-red-400' : ''} font-bold`}>Treditional</Link>
                 <div onClick={()=> setLocalStatus(!localStatus)} className="relative flex items-center gap-x-1 cursor-pointer">
-                  <span>Famous</span>
+                  <span className='font-bold'>Famous</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
                   <div className={`${localStatus ? 'opacity-100 top-[46px]' : 'opacity-0 -top-64'} max-h-96 overflow-y-auto scroolbar-hidden transitions absolute border w-52 z-[-1] shadow-md bg-white flex-col rounded-md overflow-hidden whitespace-nowrap`}>
                     {
@@ -100,10 +100,10 @@ export default function page() {
                     }
                   </div>
                 </div>
-                <Link href="food">My Rewards</Link>
-                <Link href="food">Gift Cards</Link>
+                <Link href="food" className='font-bold'>My Rewards</Link>
+                <Link href="food" className='font-bold'>Gift Cards</Link>
               </div>
-              <Link href="/login" className="flex items-center gap-x-1 font-semibold py-3">
+              <Link href="/login" className="flex items-center gap-x-1 font-bold py-3">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
                 <span>Login</span>
               </Link>
