@@ -23,5 +23,11 @@ export const regions = [
       slug: "rajshahi",
       image: "/images/banner.jpg",
     },
+    {
+      id:5,
+      name: "Sirajganj",
+      slug: "sirajganj",
+      image: "/images/banner.jpg",
+    },
   ];
   
