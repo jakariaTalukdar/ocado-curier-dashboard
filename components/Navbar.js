@@ -87,12 +87,12 @@ export default function page() {
                 </button>
               </Link>  
               <div className={`${navStatus ? "w-[108.5%] flex md:static absolute -left-[4%] flex-col -bottom-[162px] gap-y-3 py-3" : "hidden md:flex"} bg-white py-[22px] items-center justify-center gap-x-7`}>
-                <Link href="/explore" className={`${pathName === '/explore' && pathName !== '/' ? 'font-semibold text-red-400' : ''} font-bold`}>Explore</Link>
-                <Link href="/treditional" className={`${pathName === '/treditional' ? 'font-semibold text-red-400' : ''} font-bold`}>Treditional</Link>
+                <Link href="/explore" className={`${pathName === '/explore' && pathName !== '/' ? 'font-medium text-red-400' : ''} font-medium`}>Explore</Link>
+                <Link href="/treditional" className={`${pathName === '/treditional' ? 'font-medium text-red-400' : ''} font-medium`}>Treditional</Link>
                 <div onClick={()=> setLocalStatus(!localStatus)} className="relative flex items-center gap-x-1 cursor-pointer">
-                  <span className='font-bold'>Famous</span>
+                  <span className='font-medium'>Famous</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
-                  <div className={`${localStatus ? 'opacity-100 top-[46px]' : 'opacity-0 -top-64'} max-h-96 overflow-y-auto scroolbar-hidden transitions absolute border w-52 z-[-1] shadow-md bg-white flex-col rounded-md overflow-hidden whitespace-nowrap`}>
+                  <div className={`${localStatus ? 'opacity-100 top-[46px]' : 'opacity-0 -top-96'} max-h-96 overflow-y-auto scroolbar-hidden transitions absolute border w-52 z-[-1] shadow-md bg-white flex-col rounded-md overflow-hidden whitespace-nowrap`}>
                     {
                       districts.map((district)=>(
                         <Link href="/profile" className='flex items-center gap-x-3 px-4 py-3 text-sm text-red-700 font-medium hover:bg-gray-100'>{district.name}</Link>
@@ -100,15 +100,15 @@ export default function page() {
                     }
                   </div>
                 </div>
-                <Link href="food" className='font-bold'>My Rewards</Link>
-                <Link href="food" className='font-bold'>Gift Cards</Link>
+                <Link href="food" className='font-medium'>My Rewards</Link>
+                <Link href="food" className='font-medium'>Gift Cards</Link>
               </div>
               <Link href="/login" className="flex items-center gap-x-1 font-bold py-3">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
                 <span>Login</span>
               </Link>
               <div className='hidden items-center gap-x-5 bg-white py-3'>
-                <div onClick={()=> setProfileStatus(!profileStatus)} className="hidden relative md:flex items-center gap-x-1 font-semibold cursor-pointer">
+                <div onClick={()=> setProfileStatus(!profileStatus)} className="hidden relative md:flex items-center gap-x-1 font-medium cursor-pointer">
                   <div className='h-10 w-10 relative rounded-full overflow-hidden'>
                     <Image src="/images/pizza.jpg" alt='User' layout='fill' objectFit='cover'/>
                   </div>
