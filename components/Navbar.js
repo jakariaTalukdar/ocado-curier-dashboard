@@ -80,13 +80,22 @@ export default function page() {
   return (
       <nav className="sticky top-0 w-full bg-white shadow-md border-b border-gray-200 z-50">
           <div className="relative w-11/12 md:w-10/12 mx-auto flex items-center justify-between text-gray-600">
-              <Link href="/" className="w-full md:w-auto flex items-center justify-between md:justify-start">
-                <img src="https://kfcbd.com/css/OnlineOrderingImages/Shared/md/logo_kfc.svg" alt="" className="w-10 h-10" />
-                <button type="button" onClick={()=> setNavStatus(!navStatus)} className="md:hidden">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
-                </button>
-              </Link>  
-              <div className={`${navStatus ? "w-[108.5%] flex md:static absolute -left-[4%] flex-col -bottom-[162px] gap-y-3 py-3" : "hidden md:flex"} bg-white py-[22px] items-center justify-center gap-x-7`}>
+              <div href="/" className="w-full md:w-auto flex items-center justify-between md:justify-start">
+                <Link href="/">
+                  <img src="https://kfcbd.com/css/OnlineOrderingImages/Shared/md/logo_kfc.svg" alt="" className="w-10 h-10" />
+                </Link>
+                <div className='flex items-center gap-x-2'>
+                  <Link href="/login" className="md:hidden flex items-center gap-x-1 font-bold py-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
+                    <span>Login</span>
+                  </Link>
+                  <button type="button" onClick={()=> setNavStatus(!navStatus)} className="md:hidden">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                  </button>
+                </div>
+              </div>
+
+              <div className={`${navStatus ? "w-[108.5%] flex md:static absolute -left-[5%] flex-col -bottom-[213px] gap-y-3 py-3" : "-left-full -bottom-[213px] absolute md:static md:flex"} transition-all duration-150 bg-white py-[22px] items-end pr-5 md:items-center justify-center gap-x-7`}>
                 <Link href="/explore" className={`${pathName === '/explore' && pathName !== '/' ? 'font-medium text-red-400' : ''} font-medium`}>Explore</Link>
                 <Link href="/treditional" className={`${pathName === '/treditional' ? 'font-medium text-red-400' : ''} font-medium`}>Treditional</Link>
                 <div onClick={()=> setLocalStatus(!localStatus)} className="relative flex items-center gap-x-1 cursor-pointer">
@@ -103,10 +112,12 @@ export default function page() {
                 <Link href="food" className='font-medium'>My Rewards</Link>
                 <Link href="food" className='font-medium'>Gift Cards</Link>
               </div>
-              <Link href="/login" className="flex items-center gap-x-1 font-bold py-3">
+              
+              <Link href="/login" className="hidden md:flex items-center gap-x-1 font-bold py-3">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
                 <span>Login</span>
               </Link>
+
               <div className='hidden items-center gap-x-5 bg-white py-3'>
                 <div onClick={()=> setProfileStatus(!profileStatus)} className="hidden relative md:flex items-center gap-x-1 font-medium cursor-pointer">
                   <div className='h-10 w-10 relative rounded-full overflow-hidden'>
