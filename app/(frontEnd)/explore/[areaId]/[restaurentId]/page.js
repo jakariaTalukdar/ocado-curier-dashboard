@@ -21,7 +21,7 @@ export default function page({params}) {
             <span className='text-sm'>Star Kabab & Restaurant - Banani</span>
         </div>
         <div className='grid grid-cols-1 md:grid-cols-12 gap-x-5 gap-y-3'>
-            <Image src={productImage} alt='Restaurent Image' className='col-span-1 md:col-span-2 rounded-xl'/>
+            <Image src={productImage} alt='Restaurent Image' placeholder="blur"	 className='col-span-1 md:col-span-2 rounded-xl'/>
             <div className='col-span-10 flex flex-col gap-y-3 md:gap-y-5'>
                 <div className='flex items-center gap-x-2 text-xs md:text-sm text-gray-600'>
                     <span className='border-r pr-2 border-gray-400'>Asian</span>
@@ -113,7 +113,21 @@ export default function page({params}) {
                             <p className='line-clamp-3 text-xs md:text-sm'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A doloremque fugiat voluptate, suscipit hic numquam modi aperiam eos porro similique.</p>
                         </div>
                         <div className='relative col-span-1'>
-                            <Image src={foodImage} alt='Food Item' quality={100}/>
+                            <Image src={foodImage} alt='Food Item' placeholder='blur' quality={100}/>
+                            <button type='button' className='absolute bottom-0 right-0 h-10 w-10 bg-white shadow-md flex items-center justify-center rounded-full border hover:bg-gray-100 hover:scale-90 transitions cursor-pointer'>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div className="col-span-1 p-2 grid grid-cols-3 gap-x-1 border border-red-400 rounded-lg shadow-md hover:scale-[1.03] transitions">
+                        <div className="col-span-2 flex flex-col gap-y-1">
+                            <h4 className='truncate font-semibold text-sm md:text-lg'>Mutton Kacchi Biriyani</h4>
+                            <h5 className='font-light text-xs md:text-base text-gray-600'>From TK 235</h5>
+                            <p className='line-clamp-3 text-xs md:text-sm'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A doloremque fugiat voluptate, suscipit hic numquam modi aperiam eos porro similique.</p>
+                        </div>
+                        <div className='relative col-span-1'>
+                            <Image src={foodImage} alt='Food Item' placeholder='blur' quality={100}/>
                             <button type='button' className='absolute bottom-0 right-0 h-10 w-10 bg-white shadow-md flex items-center justify-center rounded-full border hover:bg-gray-100 hover:scale-90 transitions cursor-pointer'>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
                             </button>
@@ -169,21 +183,7 @@ export default function page({params}) {
                             <p className='line-clamp-3 text-xs md:text-sm'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A doloremque fugiat voluptate, suscipit hic numquam modi aperiam eos porro similique.</p>
                         </div>
                         <div className='relative col-span-1'>
-                            <Image src={foodImage} alt='Food Item' quality={100}/>
-                            <button type='button' className='absolute bottom-0 right-0 h-10 w-10 bg-white shadow-md flex items-center justify-center rounded-full border hover:bg-gray-100 hover:scale-90 transitions cursor-pointer'>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div className="col-span-1 p-2 grid grid-cols-3 gap-x-1 border border-red-400 rounded-lg shadow-md hover:scale-[1.03] transitions">
-                        <div className="col-span-2 flex flex-col gap-y-1">
-                            <h4 className='truncate font-semibold text-sm md:text-lg'>Mutton Kacchi Biriyani</h4>
-                            <h5 className='font-light text-xs md:text-base text-gray-600'>From TK 235</h5>
-                            <p className='line-clamp-3 text-xs md:text-sm'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A doloremque fugiat voluptate, suscipit hic numquam modi aperiam eos porro similique.</p>
-                        </div>
-                        <div className='relative col-span-1'>
-                            <Image src={foodImage} alt='Food Item' quality={100}/>
+                            <Image src={foodImage} alt='Food Item' placeholder='blur' quality={100}/>
                             <button type='button' className='absolute bottom-0 right-0 h-10 w-10 bg-white shadow-md flex items-center justify-center rounded-full border hover:bg-gray-100 hover:scale-90 transitions cursor-pointer'>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
                             </button>
@@ -206,7 +206,7 @@ export default function page({params}) {
 
                 <div className='grid grid-cols-6 gap-2 py-5 border-t border-gray-300'>
                     <div className='col-span-1'>
-                        <Image src={productImage} alt='product Image' className='h-full w-full object-cover'/>
+                        <Image src={productImage} placeholder='blur' alt='product Image' className='h-full w-full object-cover'/>
                     </div>
                     <div className='col-span-5 flex flex-col gap-y-0.5'>
                         <h4 className='truncate md:text-lg font-medium'>Food Item Name</h4>
@@ -224,7 +224,7 @@ export default function page({params}) {
 
                 <div className='grid grid-cols-6 gap-2 py-5 border-t border-gray-300'>
                     <div className='col-span-1'>
-                        <Image src={productImage} alt='product Image' className='h-full w-full object-cover'/>
+                        <Image src={productImage} placeholder='blur' alt='product Image' className='h-full w-full object-cover'/>
                     </div>
                     <div className='col-span-5 flex flex-col gap-y-0.5'>
                         <h4 className='truncate text-lg font-medium'>Food Item Name</h4>
