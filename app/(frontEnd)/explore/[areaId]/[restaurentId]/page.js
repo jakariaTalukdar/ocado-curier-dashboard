@@ -57,17 +57,56 @@ export default function page({params}) {
                 </div>
             </div>
         </div>
-        <hr className='text-gray-200' />
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-x-5'>
+        <div className='flex flex-wrap items-center gap-1.5 border-y border-gray-200 py-5'>
+            <div className='flex items-center gap-x-1 bg-gray-100 p-2 rounded-md'>
+                <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                </button>
+                <input type="text" name="" id="" placeholder='Search' className='border-none outline-none text-sm text-gray-500' />
+            </div>
+            <button className='flex items-center justify-center gap-x-1 hover:bg-gray-100 px-4 py-2 text-sm text-gray-500 rounded-md font-medium cursor-pointer transition-all duration-150 border'>
+                <span>Popular</span>
+                <span>(6)</span>
+            </button>
+            <button className='flex items-center justify-center gap-x-1 hover:bg-gray-100 px-4 py-2 text-sm text-gray-500 rounded-md font-medium cursor-pointer transition-all duration-150 border'>
+                <span>Snacks</span>
+                <span>(3)</span>
+            </button>
+            <button className='flex items-center justify-center gap-x-1 hover:bg-gray-100 px-4 py-2 text-sm text-gray-500 rounded-md font-medium cursor-pointer transition-all duration-150 border'>
+                <span>Luchi & Paratha</span>
+                <span>(4)</span>
+            </button>
+            <button className='flex items-center justify-center gap-x-1 hover:bg-gray-100 px-4 py-2 text-sm text-gray-500 rounded-md font-medium cursor-pointer transition-all duration-150 border'>
+                <span>Bhorta & Vegetable</span>
+                <span>(5)</span>
+            </button>
+            <button className='flex items-center justify-center gap-x-1 hover:bg-gray-100 px-4 py-2 text-sm text-gray-500 rounded-md font-medium cursor-pointer transition-all duration-150 border'>
+                <span>Fish</span>
+                <span>(15)</span>
+            </button>
+            <button className='flex items-center justify-center gap-x-1 hover:bg-gray-100 px-4 py-2 text-sm text-gray-500 rounded-md font-medium cursor-pointer transition-all duration-150 border'>
+                <span>Curry</span>
+                <span>(8)</span>
+            </button>
+            <button className='flex items-center justify-center gap-x-1 hover:bg-gray-100 px-4 py-2 text-sm text-gray-500 rounded-md font-medium cursor-pointer transition-all duration-150 border'>
+                <span>Rice</span>
+                <span>(2)</span>
+            </button>
+            <button className='flex items-center justify-center gap-x-1 hover:bg-gray-100 px-4 py-2 text-sm text-gray-500 rounded-md font-medium cursor-pointer transition-all duration-150 border'>
+                <span>Set Menu</span>
+                <span>(3)</span>
+            </button>
+        </div>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-x-7'>
             <div className='col-span-1 md:col-span-2 flex flex-col gap-y-1'>
                 <div className='flex items-center gap-x-1'>
                     <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="#f7b900" stroke="currentColor" stroke-width="0" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-flame"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
                     <h2 className='text-2xl md:text-3xl font-semibold'>Popular</h2>
                 </div>
                 <h3 className='text-gray-500 text-sm'>Most ordered right now.</h3>
-                <div className='grid grid-cols-1 md:grid-cols-2 gap-2 mt-3'>
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mt-3'>
 
-                    <div className="col-span-1 p-2 grid grid-cols-3 gap-x-1 border border-red-400 rounded-lg shadow-md">
+                    <div className="col-span-1 p-2 grid grid-cols-3 gap-x-1 border border-red-400 rounded-lg shadow-md hover:scale-[1.03] transitions">
                         <div className="col-span-2 flex flex-col gap-y-1">
                             <h4 className='truncate font-semibold text-sm md:text-lg'>Mutton Kacchi Biriyani</h4>
                             <h5 className='font-light text-xs md:text-base text-gray-600'>From TK 235</h5>
@@ -81,7 +120,63 @@ export default function page({params}) {
                         </div>
                     </div>
 
-                    <div className="col-span-1 p-2 grid grid-cols-3 gap-x-1 border border-red-400 rounded-lg shadow-md">
+                    <div className="col-span-1 p-2 grid grid-cols-3 gap-x-1 border border-red-400 rounded-lg shadow-md hover:scale-[1.03] transitions">
+                        <div className="col-span-2 flex flex-col gap-y-1">
+                            <h4 className='truncate font-semibold text-sm md:text-lg'>Mutton Kacchi Biriyani</h4>
+                            <h5 className='font-light text-xs md:text-base text-gray-600'>From TK 235</h5>
+                            <p className='line-clamp-3 text-xs md:text-sm'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A doloremque fugiat voluptate, suscipit hic numquam modi aperiam eos porro similique.</p>
+                        </div>
+                        <div className='relative col-span-1'>
+                            <Image src={foodImage} alt='Food Item' quality={100}/>
+                            <button type='button' className='absolute bottom-0 right-0 h-10 w-10 bg-white shadow-md flex items-center justify-center rounded-full border hover:bg-gray-100 hover:scale-90 transitions cursor-pointer'>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div className="col-span-1 p-2 grid grid-cols-3 gap-x-1 border border-red-400 rounded-lg shadow-md hover:scale-[1.03] transitions">
+                        <div className="col-span-2 flex flex-col gap-y-1">
+                            <h4 className='truncate font-semibold text-sm md:text-lg'>Mutton Kacchi Biriyani</h4>
+                            <h5 className='font-light text-xs md:text-base text-gray-600'>From TK 235</h5>
+                            <p className='line-clamp-3 text-xs md:text-sm'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A doloremque fugiat voluptate, suscipit hic numquam modi aperiam eos porro similique.</p>
+                        </div>
+                        <div className='relative col-span-1'>
+                            <Image src={foodImage} alt='Food Item' quality={100}/>
+                            <button type='button' className='absolute bottom-0 right-0 h-10 w-10 bg-white shadow-md flex items-center justify-center rounded-full border hover:bg-gray-100 hover:scale-90 transitions cursor-pointer'>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div className="col-span-1 p-2 grid grid-cols-3 gap-x-1 border border-red-400 rounded-lg shadow-md hover:scale-[1.03] transitions">
+                        <div className="col-span-2 flex flex-col gap-y-1">
+                            <h4 className='truncate font-semibold text-sm md:text-lg'>Mutton Kacchi Biriyani</h4>
+                            <h5 className='font-light text-xs md:text-base text-gray-600'>From TK 235</h5>
+                            <p className='line-clamp-3 text-xs md:text-sm'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A doloremque fugiat voluptate, suscipit hic numquam modi aperiam eos porro similique.</p>
+                        </div>
+                        <div className='relative col-span-1'>
+                            <Image src={foodImage} alt='Food Item' quality={100}/>
+                            <button type='button' className='absolute bottom-0 right-0 h-10 w-10 bg-white shadow-md flex items-center justify-center rounded-full border hover:bg-gray-100 hover:scale-90 transitions cursor-pointer'>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div className="col-span-1 p-2 grid grid-cols-3 gap-x-1 border border-red-400 rounded-lg shadow-md hover:scale-[1.03] transitions">
+                        <div className="col-span-2 flex flex-col gap-y-1">
+                            <h4 className='truncate font-semibold text-sm md:text-lg'>Mutton Kacchi Biriyani</h4>
+                            <h5 className='font-light text-xs md:text-base text-gray-600'>From TK 235</h5>
+                            <p className='line-clamp-3 text-xs md:text-sm'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A doloremque fugiat voluptate, suscipit hic numquam modi aperiam eos porro similique.</p>
+                        </div>
+                        <div className='relative col-span-1'>
+                            <Image src={foodImage} alt='Food Item' quality={100}/>
+                            <button type='button' className='absolute bottom-0 right-0 h-10 w-10 bg-white shadow-md flex items-center justify-center rounded-full border hover:bg-gray-100 hover:scale-90 transitions cursor-pointer'>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div className="col-span-1 p-2 grid grid-cols-3 gap-x-1 border border-red-400 rounded-lg shadow-md hover:scale-[1.03] transitions">
                         <div className="col-span-2 flex flex-col gap-y-1">
                             <h4 className='truncate font-semibold text-sm md:text-lg'>Mutton Kacchi Biriyani</h4>
                             <h5 className='font-light text-xs md:text-base text-gray-600'>From TK 235</h5>
@@ -98,7 +193,7 @@ export default function page({params}) {
                     
                 </div>
             </div>
-            <div className='p-4 border shadow-md rounded-md flex flex-col gap-y-3'>
+            <div className='sticky top-0 p-4 border shadow-md rounded-md flex flex-col gap-y-3'>
                 <div className='grid grid-cols-2 bg-gray-100 p-2 gap-x-2 rounded-md text-sm'>
                     <button className='col-span-1 bg-gray-50 py-2 rounded-md hover:border-gray-300 border border-transparent cursor-pointer transitions hover:bg-gray-100 font-semibold text-gray-600 flex flex-col'>
                         <span>Delevery</span>
@@ -111,25 +206,25 @@ export default function page({params}) {
 
                 <div className='grid grid-cols-6 gap-2 py-5 border-t border-gray-300'>
                     <div className='col-span-1'>
-                        <Image src={productImage} alt='product Image' className='h-full w-full object-center'/>
+                        <Image src={productImage} alt='product Image' className='h-full w-full object-cover'/>
                     </div>
                     <div className='col-span-5 flex flex-col gap-y-0.5'>
-                        <h4 className='truncate text-lg font-medium'>Food Item Name</h4>
+                        <h4 className='truncate md:text-lg font-medium'>Food Item Name</h4>
                         <div className='flex items-center justify-between'>
                             <p className='flex items-center gap-x-1'>
-                                <span className='text-xs'>Unit Price</span>
-                                <span className='text-xs text-red-500 font-semibold'>TK 50</span>
-                                <del className='text-xs text-gray-500'>TK 60</del>
+                                <span className='text-[10px] md:text-xs'>Unit Price</span>
+                                <span className='text-[10px] md:text-xs text-red-500 font-semibold'>TK 50</span>
+                                <del className='text-[10px] md:text-xs text-gray-500'>TK 60</del>
                             </p>
                             <FoodCounter/>
                         </div>
-                        <span className='text-sm text-red-600 font-medium'>Total Price TK 500</span>
+                        <span className='text-xs md:text-sm text-red-600 font-medium'>Total Price TK 500</span>
                     </div>
                 </div>
 
                 <div className='grid grid-cols-6 gap-2 py-5 border-t border-gray-300'>
                     <div className='col-span-1'>
-                        <Image src={productImage} alt='product Image' className='h-full w-full object-center'/>
+                        <Image src={productImage} alt='product Image' className='h-full w-full object-cover'/>
                     </div>
                     <div className='col-span-5 flex flex-col gap-y-0.5'>
                         <h4 className='truncate text-lg font-medium'>Food Item Name</h4>
